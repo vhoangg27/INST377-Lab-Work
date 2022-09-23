@@ -1,19 +1,13 @@
-<!--
-    Replace this with your working code from Lab 2, and include:
-    - The styles in this folder's `style.css`
-    - The script in script.js, which should be included via a `<script src="script.js" >` call before your closing </body> tag 
--->
-
 <!DOCTYPE html>
 <html>
   <head class="header">
     <title>Lab 2 </title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"/>
   </head>
   <body> 
   <div class="wrapper">
   <header class="header"><h1> Vivian's Labs for INST377</h1>
-    </header>
+
     <div class="container">
     <div class="left_section box">
     <h2>Album Names</h2>
@@ -30,33 +24,35 @@
   <div class="right_section box">
     
     <h2>Image Carousel</h2>
-    <div>
+    <div class="carousel">
+        <button class="prev">prev</button>
+        <div class="slides"> 
 
-    <h2>JPGs</h2>
  
- <p>JPG images are good for photos.</p>
- 
- <img src='images/mochi.jpg' width='75' alt='A mochi ball in a bubble'/>
+ <img id="slide_1" src='images/cat1.png' width='75' alt='An image of a cat'/>
 
- <h2>GIFs</h2>
 
-<p>GIFs are good for animations.</p>
+<img id="slide_2" src='images/cat2.jpeg' width='75' alt='An image of a cat'/>
 
-<img src='images/mochi.gif' width='75' alt='A dancing mochi ball'/>
 
-<h2>PNGs</h2>
+<img src='images/cat3.jpeg' width='75' alt='An image of a cat'/>
 
-<p>PNGs are good for diagrams and icons.</p>
 
-<img src='images/mochi.png' width='75' alt='A mochi ball'/>
 
-<h2>SVGs</h2>
-
-<p>SVGs are <em>amazing</em>. Use them wherever you can.</p>
-
-<img src='images/mochi.svg'width='75' alt='A mochi ball with Bézier handles'/>
-  </body>
+<img id="slide_3" src='images/cat4.jpeg'width='75' alt='An image of a sleepy cat'/>
+<img
+    id="slide_4"
+    src="images/cat4.jpeg"
+    alt="An image of a sleepy cat"
+/>
+</div>
+<button class="next">next</button>
+</div>
+<div class="box"></div>
+</body>
 </html>
+
+
 
 <!DOCTYPE html>
 <html>
@@ -66,5 +62,9 @@
   <p>Link to Github:</p>
   <li>https://github.com/vhoangg27/INST377-Lab-Work</li>
 <ul>
-  
+
+    </footer>
+</div>
+<script src="script.js" ></script>
+</body>
 </html>
