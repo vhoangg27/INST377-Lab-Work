@@ -23,7 +23,7 @@ import express from 'express';
 import livereload from 'livereload';
 import connectLivereload from 'connect-livereload';
 import dotenv from 'dotenv';
-import path from 'path';
+import path from 'path'; 
 
 // lab-authored routes
 // Inside this file you'll find all the routes your client can request from this server
