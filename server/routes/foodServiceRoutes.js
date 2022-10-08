@@ -52,6 +52,13 @@ router
       console.log('You touched the foodService Route!');
       console.log('req.foodServiceData results in foodServicePG GET', req.foodServiceData.length); // this information comes in through the middleware above
 
+      /*
+        req: {
+          query:{
+            resto: 'has any value at all'
+          }
+        }
+      */
       let reply;
       if (req.query?.resto) {
         console.log('query parameters if any', req.query);
