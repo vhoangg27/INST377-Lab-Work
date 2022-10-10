@@ -48,22 +48,12 @@ router
       Then we will structure our information on the server
       And pass what we need to our client
     */
-    try { // Try: This code might work! It might not, though
+    try { // Try: This code might work! It might not, though. It's important to res - respond, to seal the request - regardless.
       console.log('You touched the foodService Route!');
       console.log('req.foodServiceData results in foodServicePG GET', req.foodServiceData.length); // this information comes in through the middleware above
 
-      /*
-        req: {
-          query:{
-            resto: 'has any value at all'
-          }
-        }
-      */
       let reply;
       if (req.query?.resto) {
-      } else {
-        reply = req.foodServiceData;
-      }
         console.log('query parameters if any', req.query);
 
         // A `.filter` function will return the all elements in an array that match a truth check.
@@ -94,9 +84,8 @@ router
         All array items if we have no query
         Only the matches if we have a query - which means nothing if the query did not match anything
       */
-        res.json({ data: reply });
-      } catch (err) { // Catch: if our above code breaks, this will fire, and send a response to our client saying what happened.
-      } (err) => // Catch: if our above code breaks, this will fire, and send a response to our client saying what happened.
+      res.json({ data: reply });
+    } catch (err) { // Catch: if our above code breaks, this will fire, and send a response to our client saying what happened.
       console.log(err); // Show the server our error
 
       // Send a reply to make sure our request from our front-end does not hang open
