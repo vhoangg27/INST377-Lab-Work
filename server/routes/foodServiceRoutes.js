@@ -61,7 +61,7 @@ router
       */
       let reply;
       if (req.query?.resto) {
-      } else {
+        } else {
         reply = req.foodServiceData;
       }
         console.log('query parameters if any', req.query);
@@ -79,6 +79,7 @@ router
           // And we return the _first_ item that is "true" from that check
           return lowerCaseName.includes(lowerCaseQuery);
 
+      
           // If we were writing a "find," this would return the first single object that matched the test
           // If we were writing a "map," the function we applied would change every element and return a new array of those elements
           // If we write a "forEach," the function changes the original array, which tends to be less good - unexpected errors can seep in
