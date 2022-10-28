@@ -26,7 +26,7 @@ function updateSlidePosition() {
 
 console.log(slidePosition);
 slides[slidePosition].classList.add('visible');
-
+}
 
 
 
