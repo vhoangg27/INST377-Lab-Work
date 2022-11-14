@@ -9,7 +9,7 @@
 <body>
   <div class="wrapper"> 
     <header class="header">
-      <h1>Vivian INST377 Labs</h1>
+      <h1>Vivian's INST377 Labs</h1>
     </header>
     <div class="container">
       <div class="left_section box">
@@ -17,10 +17,10 @@
         <form action="/api" class="box main_form">
             <div>
                 <label for="resto">Restaurant Name</label>
+                <input type="text" name="resto" id="resto">
                
             </div>
-             <label for="resto"></label>
-             <input type="text" name="resto" id="resto">
+             <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
              <button type="submit">Submit</button>
           </div>
           
@@ -28,7 +28,7 @@
       </div>
       <div class="right_section box">
         <h3>Local Restaurant Map</h3>
-        <div class="restaurant_list box">A list of restaurants from an API</div>
+        <div class="box" id="restaurant_list">
        </div>
       </div>
     </div>
@@ -40,8 +40,6 @@
   </body>
 </html>
 
-<!--
-This is how to build the CSS-only load animation from loading.io    
-    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+
 
     
