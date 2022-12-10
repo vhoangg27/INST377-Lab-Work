@@ -117,6 +117,7 @@
     And will be what displays in your client
   */
   
+
   .box {
     background-color: F7FF58(239, 239, 239, 0.40);
     border: 2px dashed;
@@ -270,9 +271,15 @@
     /* Pick a good background colour for your hover pseudoclass */
   }
   
-  /*
-  Form Styles
-  */
+  /* Map Styles */
+
+  #map {
+    display: block;
+    width: 400px;
+    height: 380px;
+    border: 2px dashed rgb(246, 169, 93);
+    margin-bottom: 1rem;
+  }
   
   form input {
       /* This is a hack to make sure our boxes line up with one another nicely */

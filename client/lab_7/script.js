@@ -50,11 +50,8 @@ function processRestaurants(list) {
   const newArray = range.map((item) => {
     const index = getRandomIntInclusive(0, list.length);
     return list[index];
-
-  })
+  });
   return newArray;
-    
-
 
   /*
     ## Process Data Separately From Injecting It
@@ -76,15 +73,15 @@ function processRestaurants(list) {
   */
 }
 
-    function filterList(array, filterInputValue) {
-      return array.filter((item) => {
-        const lowerCaseName = item.name.toLowerCase();
-        const lowerCaseQuery = filterInputValue.toLowerCase();
-        return lowerCaseName.includes(lowerCaseQuery);
-      });
-    }
-    
-        async function mainEvent() {
+function filterList(array, filterInputValue) {
+  return array.filter((item) => {
+    const lowerCaseName = item.name.toLowerCase();
+    const lowerCaseQuery = filterInputValue.toLowerCase();
+    return lowerCaseName.includes(lowerCaseQuery);
+  });
+}
+
+async function mainEvent() {
   /*
     ## Main Event
       Separating your main programming from your side functions will help you organize your thoughts
@@ -119,14 +116,11 @@ function processRestaurants(list) {
   console.log(arrayFromJson.data[0]);
 
   // this is called "string interpolation" and is how we build large text blocks with variables
-  console.log(`${arrayFromJson.data[0].name} ${arrayFromJson.data[0].category}`);  
-  
-
+  console.log(`${arrayFromJson.data[0].name} ${arrayFromJson.data[0].category}`);
 
   // This IF statement ensures we can't do anything if we don't have information yet
-   // the question mark in this means "if this is set at all"
-   if (arrayFromJson.data?.length > 0) { // the question mark in this means "if this is set at all"
-    
+  // the question mark in this means "if this is set at all"
+  if (arrayFromJson.data?.length > 0) { // the question mark in this means "if this is set at all"
     submit.style.display = 'block'; // let's turn the submit button back on
 
     loadAnimation.classList.remove('lds-ellipsis');
@@ -139,20 +133,15 @@ function processRestaurants(list) {
       const newFilterList = filterList(currentList, event.target.value);
       injectHTML(newFilterList);
     });
-    
-    
+
     // And here's an eventListener! It's listening for a "submit" button specifically being clicked
     // this is a synchronous event event, because we already did our async request above, and waited for it to resolve
     form.addEventListener('submit', (submitEvent) => {
-
-
       // This is needed to stop our page from changing to a new URL even though it heard a GET request
       submitEvent.preventDefault();
 
       // This constant will have the value of your 15-restaurant collection when it processes
       currentList = processRestaurants(arrayFromJson.data);
-    
-
 
       // And this function call will perform the "side effect" of injecting the HTML list for you
       injectHTML(currentList);
